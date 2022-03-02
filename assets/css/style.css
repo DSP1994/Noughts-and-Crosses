@@ -13,3 +13,19 @@
     height: 50px;
     cursor: pointer;
 }
+
+.grid:nth-child(-n + 3) {
+    border-top: none;
+}
+
+.grid:nth-child(3n + 1) {
+    border-left: none;
+}
+
+.grid:nth-child(3n + 3) {
+    border-right: none;
+}
+
+.grid:nth-last-of-type(-n + 3) {
+    border-bottom: none;
+}
