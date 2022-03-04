@@ -29,3 +29,12 @@
 .grid:nth-last-of-type(-n + 3) {
     border-bottom: none;
 }
+
+.x::after{
+    content: ❌;
+}
+
+.o::after{
+    content: ⭕;
+}
+
