@@ -35,4 +35,22 @@ document.addEventListener('click', event => {
         target.classList.add(game.xTurn ? 'x' : 'o')
 
         game.xTurn = !game.xTurn
+        
+        // If all cells are disabled, then its draw
+        if (!document.querySelectorAll('.grid:not(.disabled)').length) {
+            document.querySelector('.game-over').classList.add('visible')
+            document.querySelector('.go-text').textContent = 'Draw!'
+        }
 
+
+
+document.querySelector('.restart').addEventListener('click', () => {
+    document.querySelector('.game-over').classList.remove('visible')
+    document.querySelectorAll('.grid').forEach(cell => {
+        cell.classList.remove('disabled', 'x', 'o')
+    })
+
+    game.xTurn = true
+    game.xState = []
+    game.oState = []
+})
