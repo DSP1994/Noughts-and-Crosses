@@ -56,3 +56,14 @@ document.addEventListener('click', event => {
         })
     }
 })
+
+document.querySelector('.restart').addEventListener('click', () => {
+    document.querySelector('.game-over').classList.remove('visible')
+    document.querySelectorAll('.grid').forEach(cell => {
+        cell.classList.remove('disabled', 'x', 'o')
+    })
+
+    game.xTurn = true
+    game.xState = []
+    game.oState = []
+})

@@ -1,3 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: 10px;
+} 
+h1 {
+    font-size: 3rem;
+    margin: 6rem auto;
+    text-align: center;
+    width: 100%;
+}
+
 #game {
     position: absolute;
     top: 50%;
@@ -8,14 +21,14 @@
 }
 
 .grid {
-    border: 1px solid #000;
-    width: 50px;
-    height: 50px;
+    border: .1rem solid #000;
+    width: 5rem;
+    height: 5rem;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 28px;
+    font-size: 2.8rem;
 }
 
 .grid:not(.disabled):hover {
@@ -61,8 +74,8 @@
 
 .go-txt {
     position: absolute;
-    top: -200px;
-    font-size: 60px;
+    top: -20rem;
+    font-size: 6rem;
     font-family: sans-serif;
     font-weight: bold;
     text-align: center;
@@ -72,3 +85,45 @@
 .visible {
     display: block;
 }
+
+.restart{
+    font-size: 1rem;
+    border: .2rem solid black;
+}
+
+@media screen and (min-width:768px) {
+    h1 {
+        font-size: 5rem;
+    }
+    .grid{
+        width: 10rem;
+        height: 10rem;
+        font-size: 4rem;
+    }
+
+    .go-txt{
+        font-size: 10rem;
+    }
+    .restart{
+        font-size: 2.3rem;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    h1 {
+        font-size: 7rem;
+    }
+    .grid{
+        width: 15rem;
+        height: 15rem;
+        font-size: 6rem;
+    }
+    .go-txt{
+        font-size: 9rem;
+    }
+    .restart{
+        font-size: 4rem;
+        border: .3rem solid black;
+    }
+}
+
