@@ -21,7 +21,7 @@ h1 {
 }
 
 .grid {
-    border: .1rem solid #000;
+    border: .2rem solid black;
     width: 5rem;
     height: 5rem;
     cursor: pointer;
